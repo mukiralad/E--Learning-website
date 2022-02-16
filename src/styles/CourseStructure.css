@@ -1,0 +1,47 @@
+.courseStructure {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+}
+
+.list-group {
+  float: left;
+  height: 100%;
+  padding: 1%;
+  margin: 1%;
+  margin-top: 0;
+}
+
+.list-group-item {
+  padding: 15px;
+  background-color: #f8f8f3;
+}
+
+.list-group-item:hover {
+  cursor: pointer;
+  background-color: #f5f5ef;
+}
+
+.video-wrapper {
+  margin: 4%;
+  margin-top: 1.6%;
+}
+
+.marker {
+  margin: 4%;
+  margin-left: 0;
+  padding: 2%;
+  width: 25%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.marker--not-complete {
+  background-color: darkgray;
+  color: gray;
+}
+
+.marker--is-complete {
+  background-color: #c8e4db;
+  color: black;
+}
