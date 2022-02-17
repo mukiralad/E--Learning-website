@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/NavbarBox.css";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { useUserAuth } from "../Auth";
@@ -7,6 +8,7 @@ import logo from '../assets/logo.png'
 const NavbarBox = () => {
   const [menuClicked, setMenuClicked] = useState(false);
   const { user, logOut } = useUserAuth();
+  const navigate = useNavigate();
 
   const toggleMenuClick = () => {
     setMenuClicked(!menuClicked);
@@ -15,6 +17,7 @@ const NavbarBox = () => {
   const handleLogout = async () => {
     try {
       await logOut();
+      navigate("/");
     } catch (error) {
       alert(error.message);
     }
@@ -46,7 +49,6 @@ const NavbarBox = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/profile">Profile</Nav.Link>
               <NavDropdown title="Courses" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/introduction">
                   {" "}
@@ -73,6 +75,7 @@ const NavbarBox = () => {
                   Basic Electrical Engineering{" "}
                 </NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link href="/profile">Profile</Nav.Link>
               <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
             </Nav>
           </Navbar.Collapse>
