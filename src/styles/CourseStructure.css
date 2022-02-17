@@ -1,7 +1,9 @@
 .courseStructure {
-  margin-top: 70px;
+  height: 100vh;
   display: flex;
   flex-direction: row;
+  background: rgb(190,218,232);
+background: linear-gradient(108deg, rgba(190,218,232,1) 19%, rgba(200,228,219,1) 68%);
 }
 
 .list-group {

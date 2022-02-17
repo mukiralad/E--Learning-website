@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/NavbarBox.css";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { useUserAuth } from "../Auth";
-import logo from '../assets/logo.png'
+import Container from "@mui/material/Container";
+import logo from "../assets/logo.png";
 
 const NavbarBox = () => {
   const [menuClicked, setMenuClicked] = useState(false);
-  const { user, logOut } = useUserAuth();
+  const { logOut } = useUserAuth();
   const navigate = useNavigate();
 
   const toggleMenuClick = () => {
@@ -26,13 +26,7 @@ const NavbarBox = () => {
   return (
     <>
       <>
-        <Navbar
-          bg="light"
-          expand="lg"
-          variant="light"
-          sticky="top"
-          justify="true"
-        >
+        <Navbar bg="light" expand="lg" variant="light" sticky="top">
           <Navbar.Brand href="/home">
             <img
               alt=""
@@ -43,12 +37,26 @@ const NavbarBox = () => {
             />{" "}
           </Navbar.Brand>
 
-          <Navbar.Brand href="#home">E-Learning Module</Navbar.Brand>
+          <Navbar.Brand
+            href="/home"
+            onSelect={(e) => {
+              e.preventDefault();
+            }}
+          >
+            E-Learning Module
+          </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/home">Home</Nav.Link>
+            <Nav className="mt-auto">
+              <Nav.Link
+                href="/home"
+                onSelect={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                Home
+              </Nav.Link>
               <NavDropdown title="Courses" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/introduction">
                   {" "}
@@ -75,7 +83,14 @@ const NavbarBox = () => {
                   Basic Electrical Engineering{" "}
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/profile">Profile</Nav.Link>
+              <Nav.Link
+                href="/profile"
+                onSelect={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                Profile
+              </Nav.Link>
               <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
             </Nav>
           </Navbar.Collapse>
