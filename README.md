@@ -1,4 +1,4 @@
-# Byte Crunchers -- E-Learning Module
+# Byte Crunchers _ E-Learning Module
 
 An application for first year students of Vasavi College of Engineering to learn introductory courses through videos.
 
