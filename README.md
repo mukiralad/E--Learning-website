@@ -25,10 +25,12 @@ Go to
 https://vigorous-hugle-517e92.netlify.app/
 ```
 - Use the sign in with Google option to login with your Google account.
+
 OR
+
+
 - Use the following credentials for login with email and password:
 
-```
-Email: login@vce.ac.in
-Password: login1234
-```
+`Email: login@vce.ac.in`
+`Password: login1234`
+
