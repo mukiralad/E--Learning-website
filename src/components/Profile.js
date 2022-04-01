@@ -10,7 +10,7 @@ function Profile() {
     <>
       <Navbar />
       <div class="container">
-        <main class="grid">
+        <div class="grid">
           <article>
             <img src={assignments} alt="Sample photo" />
             <div class="text">
@@ -50,7 +50,7 @@ function Profile() {
               </a>
             </div>
           </article>
-        </main>
+        </div>
       </div>
     </>
   );
