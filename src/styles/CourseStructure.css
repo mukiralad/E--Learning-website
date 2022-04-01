@@ -44,6 +44,6 @@
 }
 
 .marker--is-complete {
-  background-color: #c8e4db;
+  background-color: rgb(32, 185, 32);
   color: black;
 }
